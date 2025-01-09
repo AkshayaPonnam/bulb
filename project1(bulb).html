@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb</title>
+</head>
+<style>
+    .center{
+        display:block;
+        margin-left:auto;
+        margin-right: auto;
+        width:30%;
+        
+    }
+    .a{
+        padding: 10px;
+        font-size: large;
+        margin-top: 10px;
+        background-color: aqua;
+    }
+</style>
+<body style="background-color:rgb(1, 1, 1);" >
+    <img id="b2"src="bulb_off.jpg" alt="not found"class="center">
+    <button id="b"class="center a">Turn on</button>
+<script>
+let b=document.getElementById('b')
+let b2=document.getElementById('b2')
+document.addEventListener('click',function(e){
+    if(b.textContent.includes('on')){
+        b2.src="bulb_on.png"
+        b.textContent="Turn off"
+    }else{
+    b2.src="bulb_off.jpg"
+    b.textContent="Turn on"
+    }
+    
+})
+</script>
+</body>
+</html>
